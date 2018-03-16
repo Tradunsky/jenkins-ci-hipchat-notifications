@@ -1,4 +1,7 @@
-@Grab('ch.viascom:hipchat-api:2.1-RC3')
+@Grapes([
+        @Grab('ch.viascom:hipchat-api:2.1-RC3'),
+        @GrabConfig( systemClassLoader=true )
+])
 import ch.viascom.hipchat.api.HipChat
 
 def call(status, owner, message, buildJob, hipchatUrl, token, debug = false) {
